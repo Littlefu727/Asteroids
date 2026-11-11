@@ -14,7 +14,7 @@ def main():
 
         log_state()
         for event in pygame.event.get():
-            if event.type == program.QUIT:
+            if event.type == pygame.QUIT:
                 return
 
         pygame.Surface.fill(screen, "black")
