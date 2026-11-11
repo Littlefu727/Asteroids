@@ -9,5 +9,9 @@ wheels/
 # Virtual environments
 .venv
 
+#nixos Specifics
+shell.nix
+
 # Programe Specifics
 game_state.jsonl
+
