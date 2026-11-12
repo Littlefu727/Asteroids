@@ -1,7 +1,8 @@
 import os
 import pygame
-from constants import SCREEN_WIDTH,SCREEN_HEIGHT
+from constants import SCREEN_WIDTH, SCREEN_HEIGHT, PLAYER_RADIUS, LINE_WIDTH
 from logger import log_state
+from player import Player
 
 # Ensure the wayland driver is fully targeted
 os.environ["SDL_VIDEODRIVER"] = "x11"
@@ -17,6 +18,8 @@ def main():
     clock = pygame.time.Clock()
     dt = 0.0
 
+    player_one = Player(SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
+
     while True:
         log_state()
         for event in pygame.event.get():
@@ -24,6 +27,10 @@ def main():
                 return
 
         pygame.Surface.fill(screen, "black")
+
+        player_one.update(dt)
+        player_one.draw(screen)
+
         pygame.display.flip()
 
         dt = clock.tick(60) / 1000
