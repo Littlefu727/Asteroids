@@ -1,6 +1,7 @@
 import os
 import pygame
 import sys
+# below are custom clases/functions
 from constants import SCREEN_WIDTH, SCREEN_HEIGHT, PLAYER_RADIUS, LINE_WIDTH
 from logger import log_state,log_event
 from player import Player
@@ -64,7 +65,7 @@ def main():
                 if a.collide_with(s):
                     log_event("asteroid_shot")
                     s.kill()
-                    a.kill()
+                    a.split()
 
         dt = clock.tick(60) / 1000
 

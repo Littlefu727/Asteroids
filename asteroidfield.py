@@ -1,7 +1,7 @@
 import random
-from collections.abc import Callable
-
 import pygame
+from collections.abc import Callable
+# below are custom clases/functions
 from asteroid import Asteroid
 from constants import *
 

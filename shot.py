@@ -1,4 +1,5 @@
 import pygame
+# below are custom clases/functions
 from circleshape import CircleShape
 from constants import SHOT_RADIUS, LINE_WIDTH
 
