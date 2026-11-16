@@ -60,6 +60,12 @@ def main():
                 print("Game over!")
                 sys.exit()
 
+            for s in shots:
+                if a.collide_with(s):
+                    log_event("asteroid_shot")
+                    s.kill()
+                    a.kill()
+
         dt = clock.tick(60) / 1000
 
 
